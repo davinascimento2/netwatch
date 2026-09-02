@@ -39,7 +39,7 @@ O NetWatch cria uma topologia de rede no navegador e simula o caminho de pacotes
 Pré-requisito: Node.js 18 ou superior.
 
 ```bash
-git clone https://github.com/Alishahryar1/NetWatch.git
+git clone https://github.com/davinascimento2/NetWatch.git
 cd NetWatch
 npm install
 npm run dev
