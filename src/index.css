@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #06090e;
+  color: #f8fafc;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+  overflow: hidden;
+}
+
+/* Custom Cyber Scrollbars */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.25);
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(56, 189, 248, 0.6);
+}
+
+/* React Flow Cyberpunk Custom Overrides */
+.netwatch-flow .react-flow__handle {
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.netwatch-flow .react-flow__handle:hover {
+  transform: scale(1.3);
+  box-shadow: 0 0 8px rgba(0, 240, 255, 0.8);
+}
+
+.netwatch-flow .react-flow__attribution {
+  display: none !important;
+}
+
+/* Animated Marching Dashes on Traversed Edges */
+@keyframes flowDash {
+  from {
+    stroke-dashoffset: 24;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.react-flow__edge.animated path {
+  stroke-dasharray: 6 3;
+  animation: flowDash 0.8s linear infinite !important;
+}
+
+/* Scanline / CRT Vignette */
+.bg-radial-vignette {
+  background: radial-gradient(circle at center, transparent 60%, rgba(0, 0, 0, 0.65) 100%);
+}
